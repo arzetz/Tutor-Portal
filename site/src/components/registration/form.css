@@ -1,0 +1,107 @@
+.form {
+    font-family: 'Montserrat', sand-serif;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.form__container {
+    margin: 0 auto;
+    width: 1200px;
+    height: 500px;
+}
+
+.form__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.form__content {
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 7px 3px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 30px 0;
+    border-top: 10px solid #ff8800;
+}
+
+.form__inputs {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: auto;
+    column-gap: 100px;
+    row-gap: 30px;
+}
+
+.form__inputs--label {
+    font-size: 16px;
+    color: rgba(162,162,162,1);
+    text-align: center;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form__inputs--item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 auto;
+}
+
+.form__inputs--input {
+    width: 300px;   
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(162,162,162,0.4);
+    padding: 0 20px;
+    transition: 0.8s;
+    text-align: center;
+}
+
+
+.form__inputs--item:not(:has(input:placeholder-shown)) label {
+    transform: translateY(0px);
+  }
+  
+.form__inputs--item:has(input:focus) label {
+    transform: translateY(0px);
+}
+
+.form__inputs--input:focus {
+    border-bottom: 2px solid #ff8800;
+}
+
+.form__button {
+    margin-top: 50px;
+    width: 500px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #ff8800;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form__inputs--checkbox {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+
+}
+
+.form__button:hover {
+    width: 550px;
+}
