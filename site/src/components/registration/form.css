@@ -103,5 +103,9 @@
 }
 
 .form__button:hover {
-    width: 550px;
+    width: 700px;
+}
+
+.form__button:active {
+    background-color: rgba(255,136,0,0.5);
 }

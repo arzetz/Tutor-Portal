@@ -1,3 +1,5 @@
+
+
 .interaction {
     font-family: 'Montserrat', sans-serif;
     margin-top: 30px;
@@ -157,7 +159,7 @@
 }
 
 .interaction__tasks--item:hover {
-    transform: translate3d(0, -5px, 0);
+    transform: translateY(-5px);
 }
 
 .task__category {
@@ -290,4 +292,73 @@
 .interaction__withdraw:hover {
     background-color: #ff8800;;
     color: white;
+}
+
+.chat {
+    animation: SlideFromBottom 0.5s;
+    position: absolute;
+    top:  80%;
+    left: 20%;
+    width: 840px;
+    height: 500px;
+    box-shadow: 0 0 7px 3px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: white;
+    z-index: 999;
+    border-top: 15px solid #ff8800;
+    padding: 15px 20px;
+}
+
+.overlay {
+    animation: OverlayOpacity 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+@keyframes SlideFromBottom {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes OverlayOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.chat.reverse-animation {
+    animation: SlideToBosttom 0.5s forwards;
+}
+
+.overlay.reverse-animation {
+    animation: ReverseOverlayOpsacity 0.5s forwards;
+}
+
+@keyframes SlideToBosttom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200%);
+    }
+}
+
+@keyframes ReverseOverlayOpsacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

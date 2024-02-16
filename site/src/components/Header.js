@@ -11,7 +11,7 @@ import Menu from "./Menu.js";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
-  const items = [{value:"ГЛАВНАЯ",href:"index.html"},{value:"НАЙТИ РЕПЕТИТОРА",href:"findtutor.html"},{value:"НАЙТИ УЧЕНИКА",href:"findstudent.html"},{value:"ОТЗЫВЫ",href:"reviews.html"},{value:"РЕГИСТРАЦИЯ",href:"registration.html"},{value:"ВХОД",href:"findtutor.html"}]
+  const items = [{value:"ГЛАВНАЯ",href:"/"},{value:"НАЙТИ РЕПЕТИТОРА",href:"/findtutor"},{value:"НАЙТИ УЧЕНИКА",href:"/findstudent"},{value:"ОТЗЫВЫ",href:"/reviews"},{value:"РЕГИСТРАЦИЯ",href:"/registration"},{value:"ВХОД",href:"/login"}]
   
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
