@@ -1,5 +1,5 @@
 import express from 'express';
-import {loginValidation} from './validations';
+import {loginValidation} from './validations.js';
 
 const app = express();
 
@@ -26,18 +26,18 @@ app.get('/auth/me',  (req, res) =>{
 
 });
 
-app.get('/posts', (req, res) =>{
+app.get('/taks', (req, res) =>{
 
 });
-app.get('/posts/:id', (req, res) =>{
+app.get('/tasks/:id', (req, res) =>{
 
 });
-app.post('/posts',  (req, res) =>{
+app.post('/taskss',  (req, res) =>{
 
 });
-app.delete('/posts/:id',  (req, res) =>{
+app.delete('/tasks/:id',  (req, res) =>{
 
 });
-app.patch('/posts/:id',  (req, res) =>{
+app.patch('/tasks/:id',  (req, res) =>{
 
 });
