@@ -1,5 +1,15 @@
 import express from 'express';
 import {loginValidation} from './validations.js';
+import mongoose from 'mongoose';
+import { register } from './controllers/UserContoller.js';
+import handleValidationErrors from './utils/handleValidationErrors.js';
+
+mongoose.set("strictQuery", false);
+
+mongoose
+    .connect('mongodb+srv://admin:admin@cluster0.mrquvr1.mongodb.net/?retryWrites=true&w=majority')
+    .then(() => console.log('DB ok'))
+    .catch((err) => console.log('DB error', err));
 
 const app = express();
 
@@ -19,9 +29,7 @@ app.post('/auth/login', (req, res) =>{
 
 });
 
-app.post('/auth/register', (req, res) =>{
-
-});
+app.post('/auth/register', handleValidationErrors,register);
 app.get('/auth/me',  (req, res) =>{
 
 });

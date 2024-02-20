@@ -17,6 +17,7 @@
     "git": "^0.1.5",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.2",
+    "npm-git-install": "^0.3.0",
     "supervisor": "^0.12.0"
   }
 }
