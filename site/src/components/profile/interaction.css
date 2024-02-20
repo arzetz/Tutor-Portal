@@ -362,3 +362,84 @@
         opacity: 0;
     }
 }
+
+@media (min-width: 100px) and (max-width: 500px) {
+
+    .interaction {
+        width: 350px;
+        height: auto;
+    }
+
+    .interaction__container {
+        width: 350px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .interaction__balance {
+        margin: 0 auto;
+        width: 330px;
+    }
+
+    .interaction__buttons {
+        margin: 0 auto;
+    }
+    
+    .interaction__container--right {
+        margin: 0 auto;
+        width: 330px;
+        height: auto;
+    }
+
+    .interaction__container--title {
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        gap: 15px;
+    }
+
+    .role__checkbox {
+        width: 100px;
+    }
+
+    .interaction__role {
+        margin: 0 auto;
+        position: relative;
+        width: 250px;
+        min-height: 30px;
+        padding: 0 20px;
+        gap: 50px;
+    }
+
+    .role__button {
+        position: absolute;
+        width: 100px;
+        height: 27px;
+        color: white;
+        background-color: #ff8800;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        margin-left: 0px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .role__user {
+        font-size: 11px;
+    }
+
+    .interaction__tasks--tutor {
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        width: 290px;
+        height: auto;
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 0));
+    }
+    
+}

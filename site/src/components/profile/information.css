@@ -19,7 +19,7 @@
 }
 
 .information__about {
-    animation: SlideFromLeft 0.4s 0.2s forwards;
+    animation: SlideFromLeft 0.4s 0.2s;
     width: 840px;
     height: 330px;
     border-radius: 10px;
@@ -30,7 +30,7 @@
 }
 
 .information__profile {
-    animation: SlideFromRight 0.4s;
+    animation: SlideFromRight 0.4s 0.2;
     width: 330px;
     height: 330px;
     border-radius: 10px;
@@ -84,6 +84,53 @@
     font-size: 16px;
     font-weight: 500;
     color: #a2a2a2;
+}
+
+@media (min-width: 100px) and (max-width: 500px) {
+    .information__container {
+        flex-direction: column-reverse;
+    }
+
+    .information__title {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .information__profile {
+        margin: 0 auto;
+        height: 300px;
+    }
+
+    .information {
+        width: 330px;
+        height: auto;
+    }
+
+    .information__container {
+        width: 330px;
+    }
+
+    .information__about {
+        animation: none;
+        opacity: 1;
+        width: 330px;
+        height: auto;
+    }
+
+    .information__about--title {
+        text-align: center;
+    }
+
+    .information__about--text {
+        text-align: center;
+    }
+
+    .information__about--button {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @keyframes SlideFromLeft {
