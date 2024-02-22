@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Findtutor extends Component {
-  render() {
+import Findtutor from '../components/Findtutor/Findtutor';
+
+function Fteach() {
     return (
-      <div>Findtutor</div>
-    )
-  }
-}
+            <Findtutor />
+    );
+};
 
+export default Fteach;

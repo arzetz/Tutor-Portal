@@ -1,0 +1,58 @@
+.findtutor__container{
+    margin: 0 auto;
+    width: 1200px;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.findtutor__content {
+    display: flex;
+    gap: 20px;
+}
+.findtutor__title{
+    margin-top: 92px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.ft_text{
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.findtutor__search{
+    margin-top: 16px;
+    justify-content: space-between;
+}
+.search__input{
+    width: 390px;
+    height: 51px;
+    justify-content: space-between;
+    padding-left: 15px;
+    border-radius: 12px;
+    border-color: #CCCCCC;
+    border-style: solid;
+}
+.budget__search{
+    display: flex;
+}
+.budget__search1{
+    margin-top: 16px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.budget__input{
+    border-color: #CCCCCC;
+    width: 191px;
+    height: 51px;
+    justify-content: space-between;
+    padding-left: 15px;
+    border-radius: 12px;
+    border-color: #CCCCCC;
+    border-style: solid;    
+}
+.budget__search2{
+    margin-left: 5px;
+    margin-top: 16px;
+}
+    
