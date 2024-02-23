@@ -7,7 +7,7 @@ import handleValidationErrors from './utils/handleValidationErrors.js';
 mongoose.set("strictQuery", false);
 
 mongoose
-    .connect('mongodb+srv://admin:admin@cluster0.mrquvr1.mongodb.net/?retryWrites=true&w=majority')
+    .connect('mongodb+srv://admin:admin@cluster0.mrquvr1.mongodb.net/tutors?retryWrites=true&w=majority')
     .then(() => console.log('DB ok'))
     .catch((err) => console.log('DB error', err));
 
@@ -24,6 +24,9 @@ app.listen(1234, (err) => {
 
     console.log('runninnnnn')
 });
+
+
+app.use(express.json());
 
 app.post('/auth/login', (req, res) =>{
 
