@@ -34,8 +34,8 @@ const Header = () => {
             </Link>
           </li>
           <li className='header__menu--item links'>
-            <Link href="findtutor" className='link find-tutor'>НАЙТИ <span className='orange'>РЕПЕТИТОРА</span><div className="link__underline"></div></Link>
-            <Link href="findstudent" className='link find-student'>НАЙТИ <span className='orange'>УЧЕНИКА</span><div className="link__underline"></div></Link>
+            <Link to="/findtutor" className='link find-tutor'>НАЙТИ <span className='orange'>РЕПЕТИТОРА</span><div className="link__underline"></div></Link>
+            <Link to="/findstudent" className='link find-student'>НАЙТИ <span className='orange'>УЧЕНИКА</span><div className="link__underline"></div></Link>
             
           </li>
           <li className='header__menu--item user hidden'>

@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-top: 70px;
     width: 1200px;
-    height: 400px;
+    height: auto;
 }
 
 .information__title {
@@ -16,10 +16,11 @@
     display: flex;
     width: 1200px;
     gap: 30px;
+    height: auto;
 }
 
 .information__about {
-    animation: SlideFromLeft 0.4s 0.2s;
+    animation: SlideFromLeft 0.4s 0.2s forwards;
     width: 840px;
     height: 330px;
     border-radius: 10px;
