@@ -1,7 +1,10 @@
 import React from 'react';
-
+import {categories} from './Categories';
+import Category from './Category';
+import {cards} from '../card/Cards';
+import Card from '../card/Card';
+    
 import './Findtutor.css';
-
 const Findtutor = () => {
 return (
 <section className='findtutor'>
@@ -30,12 +33,24 @@ return (
                             onChange={(event)=> console.log(event.target.value)}
                             />
                     </div>
+                    <ul>
+
+            {categories.map((category) => {
+            return <Category name={category.name} />;
+            })}
+
+                    </ul>
                 </div>
-            </div>
-        <div className="findtutor__tasks">
-            
+
+            <ul className = "findtutor__tasks">
+                {cards.map((card) => {
+                    return <Card name = {card.name} surname = {card.surname}
+                    price = {card.price} category = {card.category} title = {card.title}
+                    photo = {card.photo} ></Card>
+                })}
+            </ul>
         </div>
-    </div>
+            </div>
 </section>
 );
 };
