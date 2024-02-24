@@ -1,4 +1,5 @@
 import UserModel from '../models/User.js';
+import jwt from "jsonwebtoken";
 
 
 export const register = async (req, res) => {
@@ -15,13 +16,60 @@ export const register = async (req, res) => {
 
         const user = await doc.save();
 
+        const token = jwt.sign({
+            _id: user._id,
+        },
+        'artemiy_krutoi',
+        {
+            expiresIn: '30d',
+        }
+        );
+
         res.status(200).json({
-            message: 'Пользователь успешно зарегистрирован'
+            message: 'Пользователь успешно зарегистрирован',
+            token,
         });
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: req,
+            message: 'Не удалось зарегистрироваться',  //ты видишь??
+        });
+    }
+};
+
+export const login = async(req, res) =>{
+    try {
+        const user = await UserModel.findOne({email: req.body.email});
+
+        if(!user){
+            return res.status(404).json({
+                message:'Такого пользователя нема',
+            });
+        }
+
+        if(req.body.password != user._doc.password){
+            return res.status(400).json({
+                message:'Неверный пароль',
+            });
+        }
+
+        const token = jwt.sign({
+            _id: user._id,
+        },
+        'artemiy_krutoi',
+        {
+            expiresIn: '30d',
+        }
+        );
+
+        res.json({
+            token,
+        });
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+            message:'Не удалось войти',
         });
     }
 };

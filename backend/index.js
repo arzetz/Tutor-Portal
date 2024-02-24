@@ -1,8 +1,8 @@
 import express from 'express';
-import {loginValidation} from './validations.js';
 import mongoose from 'mongoose';
-import { register } from './controllers/UserContoller.js';
-import handleValidationErrors from './utils/handleValidationErrors.js';
+import {UserController, TaskContoller} from './controllers/index.js'; 
+import { registerValidation, loginValidation, TaskCreateValidation } from './validations.js';
+import { checkAuth, handleValidationErrors} from "./utils/index.js"
 
 mongoose.set("strictQuery", false);
 
@@ -28,24 +28,20 @@ app.listen(1234, (err) => {
 
 app.use(express.json());
 
-app.post('/auth/login', (req, res) =>{
+app.post('/auth/login', loginValidation, handleValidationErrors, UserController.login);
 
-});
-
-app.post('/auth/register', handleValidationErrors,register);
+app.post('/auth/register', handleValidationErrors, UserController.register);
 app.get('/auth/me',  (req, res) =>{
 
 });
-
-app.get('/taks', (req, res) =>{
+app.post('/tasks', checkAuth, TaskCreateValidation, handleValidationErrors, TaskContoller.create);
+app.get('/tasks', (req, res) =>{
 
 });
 app.get('/tasks/:id', (req, res) =>{
 
 });
-app.post('/taskss',  (req, res) =>{
 
-});
 app.delete('/tasks/:id',  (req, res) =>{
 
 });
