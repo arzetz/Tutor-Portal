@@ -174,5 +174,72 @@
 }
 
 @media (min-width: 100px) and (max-width: 500px) {
-    
+
+    .editing__label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #a2a2a2;
+    }
+
+    .edit {
+        margin-top: -30px;
+    }
+    .edit__container {
+        width: 350px;
+        height: auto;
+    }
+
+    .edit__title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .edit__profile {
+        margin: 0 auto;
+    }
+
+    .edit__editing {
+        margin: 0 auto;
+        width: 330px;
+        height: auto;
+        padding: 30px 30px;
+    }
+
+    .editing__inputs {
+        margin: 0 auto;
+        width: 330px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        max-height: none;
+        max-width: none;
+    }
+
+    .editing__input {
+        width: 270px;
+    }
+
+    .edit__content {
+        flex-direction: column;
+    }
+
+    .editing__textarea {
+        width: 270px;
+        height: 500px;
+    }
+
+    .edit__buttons {
+        width: 330px;
+        gap: 30px;
+    }
+
+    .edit__button--back {
+        width: 120px;
+        font-size: 10px;
+    }
+
+    .edit__button--submit {
+        width: 120px;
+        font-size: 10px;
+    }
+
 }

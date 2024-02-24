@@ -102,7 +102,7 @@ const CreateResume = () => {
                             <label  className='editing__label'>Подробное описание: </label>
                             <textarea placeholder="Введите описание" className='createtask__textarea'></textarea>
                         </div>
-                        <button type="submit" className="createtask__button">ОПУБЛИКОВАТЬ ЗАНЯТИЕ</button>
+                        <button type="submit" className="createtask__button">ОПУБЛИКОВАТЬ РЕЗЮМЕ</button>
                     </form>
                 </div>
             </div>

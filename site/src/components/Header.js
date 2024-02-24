@@ -12,7 +12,8 @@ import Menu from "./Menu.js";
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const items = [{value:"ГЛАВНАЯ",href:"/"},{value:"НАЙТИ РЕПЕТИТОРА",href:"/findtutor"},{value:"НАЙТИ УЧЕНИКА",href:"/findstudent"},{value:"ОТЗЫВЫ",href:"/reviews"},{value:"РЕГИСТРАЦИЯ",href:"/registration"},{value:"ВХОД",href:"/login"}]
-  
+  const items_logged = [{value:"ГЛАВНАЯ",href:"/"},{value:"НАЙТИ РЕПЕТИТОРА",href:"/findtutor"},{value:"НАЙТИ УЧЕНИКА",href:"/findstudent"},{value:"ОТЗЫВЫ",href:"/reviews"},{value:"ЛИЧНЫЙ КАБИНЕТ",href:"/profile"}]
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const handleClick = () => {
@@ -64,7 +65,10 @@ const Header = () => {
             <div class="line"></div>
             <div class="line"></div>
           </li>
+          
+          <Menu active={menuActive} setActive={setMenuActive} header={"Меню"} items={items_logged}/>
           <Menu active={menuActive} setActive={setMenuActive} header={"Меню"} items={items}/>
+          
         </ul>
       </div>
     </header>

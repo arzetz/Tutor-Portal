@@ -25,13 +25,13 @@ import Footer from './components/Footer';
 function App() {
     return (
         <>
-        <Router onUpdate={() => window.scrollTo(0, 0)} >
+        <Router>
             <Header />
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/findtutor" element={<Findtutor />} />
                 <Route path="/findstudent" element={<Findstudent />} />
-                <Route path="/profile" element={<Profile />} />
+                <Route path="/profile/" element={<Profile />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/reviews" element={<Reviews />} />

@@ -22,7 +22,7 @@ const Footer = () => {
                         <Link href="Findstudent" className='footer__menu--link'>НАЙТИ УЧЕНИКА</Link>
                     </li>
                     <li className='footer__menu--column'>
-                            <Link onClick={() => window.scrollTo(0, 0)} to="/profile" className='footer__menu--link'>ЛИЧНЫЙ КАБИНЕТ</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} to="/profile/" className='footer__menu--link'>ЛИЧНЫЙ КАБИНЕТ</Link>
                         <Link href="Reviews" className='footer__menu--link'>ОТЗЫВЫ</Link>
                     </li>
                     <li className='footer__menu--column'>

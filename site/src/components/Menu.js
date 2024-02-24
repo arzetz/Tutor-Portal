@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Menu = ({ header, items, active, setActive }) => {
     const handleItemClick = () => {
-        setActive(false); // Установить значение active в false при клике на ссылку
+        setActive(false);
     };
 
     return (

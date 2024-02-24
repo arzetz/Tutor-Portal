@@ -152,3 +152,42 @@
 .rub {
     position: fixed;
 }
+
+@media (min-width: 100px) and (max-width: 500px) {
+        .createtask {
+            margin-top: -30px;
+        }
+
+        .createtask__container {
+            width: 350px;
+            height: auto;
+        }
+
+        .createtask__content {
+            margin: 0 auto;
+            width: 330px;
+            height: auto;
+        }
+
+        .createtask__title {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .createtask__input {
+            width: 270px;
+        }
+
+        .createtask__payment {
+            flex-direction: column;
+        }
+
+        .createtask__textarea {
+            width: 270px;
+        }
+
+        .createtask__button {
+            width: 270px;
+        }
+
+}
