@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.howtofind__container {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    width: 1200px;
+    height: 200px;
+    background: white;
+}
+
+.howtofind__title {
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.howtofind__text {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.orange {
+    color: #ff8800;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (min-width: 100px) and (max-width: 500px) {
+    .howtofind__container {
+        margin-top: 100px;
+        width: 350px;
+        height: auto;
+    }
+
+    .howtofind__title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .howtofind__text {
+        text-align: center;
+        font-size: 14px;
+    }
+
+}
