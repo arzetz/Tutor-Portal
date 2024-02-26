@@ -3,7 +3,7 @@ const cards = [
     {
         category: 'Русский язык',
         title: 'Ищу репетитора по русскому языку',
-        price: '1500 Р',
+        price: '1200 ₽ / час',
         photo: 'sergei.png',
         name: 'СЕРГЕЙ',
         surname: 'МЯКОТНЫХ',
@@ -12,7 +12,7 @@ const cards = [
     {
         category: 'Английский',
         title: 'Ищу репетитора',
-        price: '1500 Р',
+        price: '1200 ₽ / час',
         photo: 'sergei.png',
         name: 'СЕРГЕЙ',
         surname: 'МЯКОТНЫХ',

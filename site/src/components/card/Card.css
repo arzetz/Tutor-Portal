@@ -45,7 +45,14 @@
     margin-left: 250px;
     outline: none;
     border: none;
+    cursor:pointer;
 }
+.button__card:hover {
+
+    background: white;
+    color: #FF8800;
+    outline: 1px solid #FF8800;
+  }
 .info__card{
     display:flex;
     align-items: center;
