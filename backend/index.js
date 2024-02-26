@@ -1,11 +1,21 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import {UserController, TaskContoller} from './controllers/index.js'; 
-import { registerValidation, loginValidation, TaskCreateValidation } from './validations.js';
-import { checkAuth, handleValidationErrors} from "./utils/index.js"
+import {
+    UserController,
+    TaskContoller
+} from './controllers/index.js';
+import {
+    registerValidation,
+    loginValidation,
+    TaskCreateValidation
+} from './validations.js';
+import {
+    checkAuth,
+    handleValidationErrors
+} from "./utils/index.js"
+
 
 mongoose.set("strictQuery", false);
-
 mongoose
     .connect('mongodb+srv://admin:admin@cluster0.mrquvr1.mongodb.net/tutors?retryWrites=true&w=majority')
     .then(() => console.log('DB ok'))
@@ -13,12 +23,12 @@ mongoose
 
 const app = express();
 
-app.get('/',(req,res) => {
+app.get('/', (req, res) => {
     res.send('Yo salam')
 });
 
 app.listen(1234, (err) => {
-    if (err){
+    if (err) {
         return console.log(err)
     }
 
@@ -30,21 +40,16 @@ app.use(express.json());
 
 app.post('/auth/login', loginValidation, handleValidationErrors, UserController.login);
 
-app.post('/auth/register', handleValidationErrors, UserController.register);
-app.get('/auth/me',  (req, res) =>{
-
-});
+app.post('/auth/register', handleValidationErrors, registerValidation, UserController.register);
+app.get('/auth/me', checkAuth, UserController.getInfo);
 app.post('/tasks', checkAuth, TaskCreateValidation, handleValidationErrors, TaskContoller.create);
-app.get('/tasks', (req, res) =>{
+app.get('/tasks', TaskContoller.getTasks);
+app.get('/tasks/:id', TaskContoller.getOne);
+
+app.delete('/tasks/:id', (req, res) => {
 
 });
-app.get('/tasks/:id', (req, res) =>{
+app.patch('/tasks/:id', checkAuth, TaskCreateValidation, handleValidationErrors, TaskContoller.update);
 
-});
 
-app.delete('/tasks/:id',  (req, res) =>{
-
-});
-app.patch('/tasks/:id',  (req, res) =>{
-
-});
+//app.post('/upload') // фотокарточки

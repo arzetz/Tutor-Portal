@@ -17,12 +17,11 @@ export const register = async (req, res) => {
         const user = await doc.save();
 
         const token = jwt.sign({
-            _id: user._id,
-        },
-        'artemiy_krutoi',
-        {
-            expiresIn: '30d',
-        }
+                _id: user._id,
+            },
+            'artemiy_krutoi', {
+                expiresIn: '30d',
+            }
         );
 
         res.status(200).json({
@@ -32,34 +31,35 @@ export const register = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: 'Не удалось зарегистрироваться',  //ты видишь??
+            message: 'Не удалось зарегистрироваться', //ты видишь??
         });
     }
 };
 
-export const login = async(req, res) =>{
+export const login = async (req, res) => {
     try {
-        const user = await UserModel.findOne({email: req.body.email});
+        const user = await UserModel.findOne({
+            email: req.body.email
+        });
 
-        if(!user){
+        if (!user) {
             return res.status(404).json({
-                message:'Такого пользователя нема',
+                message: 'Такого пользователя нема',
             });
         }
 
-        if(req.body.password != user._doc.password){
+        if (req.body.password != user._doc.password) {
             return res.status(400).json({
-                message:'Неверный пароль',
+                message: 'Неверный пароль',
             });
         }
 
         const token = jwt.sign({
-            _id: user._id,
-        },
-        'artemiy_krutoi',
-        {
-            expiresIn: '30d',
-        }
+                _id: user._id,
+            },
+            'artemiy_krutoi', {
+                expiresIn: '30d',
+            }
         );
 
         res.json({
@@ -69,7 +69,26 @@ export const login = async(req, res) =>{
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message:'Не удалось войти',
+            message: 'Не удалось войти',
+        });
+    }
+};
+
+export const getInfo = async (req,res) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+
+        if(!user){
+            return res.status(404).json({
+                message:'Пользователь не найден'
+            });
+        }
+        const {password,_id, __v, ...userData} = user._doc
+        res.json(userData);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+            message: 'Не удалось получить инфу',
         });
     }
 };
