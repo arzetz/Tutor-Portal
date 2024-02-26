@@ -1,3 +1,5 @@
+import { render } from "@testing-library/react";
+
 const categories = [
     {
         key: 'russian__language',
@@ -36,8 +38,22 @@ const categories = [
         name: "Программирование"
     },
     {
-        key: 'Рукоделие и рисование',
-        name: "handmade"
-    }
+        key: 'handmade',
+        name: "Рукоделие и рисование"
+    },
+    {
+        key: 'ogeege',
+        name: "Подготовка к ОГЭ/ЕГЭ"
+    },
+    {
+        key: 'univerprogram',
+        name: "Университетская программа"
+    },
+    {
+        key: '18+',
+        name: "Для взрослых"
+    },
 ];
+
+
 export {categories}
