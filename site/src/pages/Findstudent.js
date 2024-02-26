@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Findstudent extends Component {
-  render() {
+import Findstudent from '../components/findstudent/Findstudent';
+
+function Fstudent() {
     return (
-      <div>Findstudent</div>
-    )
-  }
-}
+            <Findstudent />
+    );
+};
+
+export default Fstudent;
