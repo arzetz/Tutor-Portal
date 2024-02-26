@@ -1,2 +1,2 @@
-export * as UserController from "./UserContoller.js"
-export * as TaskContoller from "./TaskController.js"
+export * as UserController from "./UserController.js";
+export * as TaskController from "./TaskController.js";
