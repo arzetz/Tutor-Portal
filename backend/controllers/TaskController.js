@@ -87,10 +87,7 @@ export const update = async (req, res) => {
 export const remove = async (req, res) => {
   try {
     const TaskId = req.params.id;
-
-    TaskModel.findOneAndDelete({
-      _id: TaskId,
-    });
+    await TaskModel.findOneAndDelete(TaskId);
     res.json({
       success: true,
     });
