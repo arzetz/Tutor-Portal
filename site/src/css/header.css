@@ -21,6 +21,7 @@
 
 
 .user {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -74,6 +75,38 @@
   text-decoration: none;
   cursor: pointer;
   gap: 5px;
+  color: #333333;
+  align-items: center;
+}
+
+.alert {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #ff8800;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-outside {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  left: -10px;
+  top: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
 }
 
 .user__item:hover {

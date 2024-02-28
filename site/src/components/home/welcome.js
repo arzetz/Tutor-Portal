@@ -1,5 +1,7 @@
 import '../../css/welcome.css';
 
+import { Link } from 'react-router-dom';
+
 function Welcome() {
     return (
         <section className='welcome'>
@@ -10,9 +12,9 @@ function Welcome() {
                         <p className="welcome__text">
                         Найди своего идеального преподавателя прямо сейчас! Мы подберем наилучших специалистов, прошедших тщательный отбор. Оставьте заботы о поиске нам, вы заслуживаете только лучшего!
                         </p>
-                        <a href="findtutor.html" className="link welcome__button">
+                        <Link onClick={() => window.scrollTo(0, 0)} to="/findtutor" className="link welcome__button">
                                 ПОДОБРАТЬ РЕПЕТИТОРА ➜
-                        </a>
+                        </Link>
                         <ul className="statistics">
                             <li className='statistics__item'>
                                 <span className='statistics__title'>
@@ -47,20 +49,20 @@ function Welcome() {
                 </div>
                 <ul className='find'>
                     <li className='find__item'>
-                        <a className="find__link link" href="findtutor.html">
+                        <Link onClick={() => window.scrollTo(0, 0)} className="find__link link" to="/findtutor">
                             <h2 className='find__title'>ПОИСК РЕПЕТИТОРА</h2>
                             <p className='find__text'>
                             Найди опытного репетитора для своего обучения. Используйте фильтры, чтобы сузить поиск.
                             </p>
-                        </a>
+                        </Link>
                     </li>
                     <li className='find__item'>
-                        <a className="find__link link" href="findstudent.html">
+                        <Link onClick={() => window.scrollTo(0, 0)} className="find__link link" to="/findtutor">
                             <h2 className='find__title'>ПОИСК УЧЕНИКОВ</h2>
                             <p className='find__text'>
                                 Разместите описание своей услуги и найдите учеников, которые заинтересованы вашим подходом к обучению. 
                             </p>
-                        </a>
+                        </Link>
                     </li>
                 
                 </ul>

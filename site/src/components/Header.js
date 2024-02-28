@@ -29,17 +29,18 @@ const Header = () => {
       <div className='header__container'>
         <ul className='header__menu'>
           <li className='header__menu--item logo'>
-            <Link className='link logo' to="/">
+            <Link onClick={() => window.scrollTo(0, 0)} className='link logo' to="/">
               <img className='logo__icon' src={require('../icons/logo.png')} />
               <p className='logo__title'>Навигатор обучения</p>
             </Link>
           </li>
           <li className='header__menu--item links'>
-            <Link to="/findtutor" className='link find-tutor'>НАЙТИ <span className='orange'>РЕПЕТИТОРА</span><div className="link__underline"></div></Link>
-            <Link to="/findstudent" className='link find-student'>НАЙТИ <span className='orange'>УЧЕНИКА</span><div className="link__underline"></div></Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/findtutor" className='link find-tutor'>НАЙТИ <span className='orange'>РЕПЕТИТОРА</span><div className="link__underline"></div></Link>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/findstudent" className='link find-student'>НАЙТИ <span className='orange'>УЧЕНИКА</span><div className="link__underline"></div></Link>
             
           </li>
-          <li className='header__menu--item user hidden'>
+          <li className='header__menu--item user'>
+            <div className="alert-outside ">1</div>
             <button className='user__button' onClick={handleClick}>
                   Сергей Мякотных
                   <img src={require('../icons/arrow.png')} className='user__button--arrow'/>
@@ -47,16 +48,17 @@ const Header = () => {
               {isDropdownOpen && (
                   <ul className="user__dropdown">
                       <Link to='/profile' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/profile.png')}/> Профиль</Link>
+                      <Link to='/history' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/history.png')}/> Заявки <div className='alert'>1</div></Link>
                       <Link to='/history' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/history.png')}/> История платежей</Link>
                       <li className='user__item'><img className='user__icon' src={require('../icons/exit.png')}/> Выход</li>
                   </ul>
               )}
           </li>
-          <li className='header__menu--item buttons'>
-            <Link to="/registration" className='link button--registration'>
+          <li className='header__menu--item buttons hidden'>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/registration" className='link button--registration'>
               РЕГИСТРАЦИЯ
             </Link>
-            <Link to="/login" className='link button--login'>
+            <Link onClick={() => window.scrollTo(0, 0)} to="/login" className='link button--login'>
               ВХОД
             </Link>
           </li>

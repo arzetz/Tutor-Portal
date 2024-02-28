@@ -305,7 +305,7 @@
     box-shadow: 0 0 7px 3px rgba(0,0,0,0.2);
     border-radius: 10px;
     background-color: white;
-    z-index: 999;
+    z-index: 1;
     border-top: 15px solid #ff8800;
     padding: 15px 20px;
 }
@@ -365,9 +365,6 @@
 }
 
 @media (min-width: 100px) and (max-width: 500px) {
-
-    .interaction {
-    }
 
     .interaction__container {
         width: 350px;
