@@ -18,7 +18,6 @@ const cards = [
         surname: 'МЯКОТНЫХ',
         key: 'inyaz'
     },
-    
 ];
 
 export {cards}
