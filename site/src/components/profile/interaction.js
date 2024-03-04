@@ -1,6 +1,8 @@
 import React from 'react';
 import {useState} from 'react';
 
+import chatphoto from '../../images/krestik.svg';
+
 import './interaction.css';
 
 import {Link} from 'react-router-dom';
@@ -33,13 +35,43 @@ const TutorTaskItem = ({ userID }) => {
                     <img className="task__photo" src={require('../../images/user.jpg')} alt="User" />
                     <p className='task__username'><span className='orange'>СЕРГЕЙ</span> МЯКОТНЫХ</p>
                 </div>
-                <button className='task__button'>Завершить</button>
+                <p className='task__status'>Активно</p>
             </li>
             {showChat && (
                 <>
                 <div onClick={toggleChat} className='overlay'></div>
                 <div className='chat'>
-                    Чат с пользователем (UserID: {userID})
+                    <div className='chat__left'>
+                        <div className='chat__header'>
+                            Мякотных Сергей
+                        </div>
+                        <input  placeholder='Написать сообщение..' className='chat__footer'>
+
+                        </input>
+                    </div>
+                    <div className='chat__right'>
+                        <img src={chatphoto} onClick={toggleChat} className='exit-button'>
+
+                        </img>
+                        <p className='chat__category'>
+                            Программирование
+                        </p>
+                        <p className='chat__title'>
+                            Репетитор по фронтенд-разработке
+                        </p>
+                        <p className='chat__price orange'>
+                            1 000 ₽ / час
+                        </p>
+                        <p className='chat__date'>
+                            13.02.2024
+                        </p>
+                        <button className='video'>
+                            ПОДКЛЮЧИТЬСЯ К ВИДЕОКОНФЕРЕНЦИИ
+                        </button>
+                        <button className='complete'>
+                            ЗАВЕРШИТЬ ЗАНЯТИЕ
+                        </button>
+                    </div>
                 </div>
                 </>
             )}
@@ -75,7 +107,7 @@ const StudentTaskItem = ({ userID }) => {
                     <img className="task__photo" src={require('../../images/user.jpg')} />
                     <p className='task__username'><span className='orange'>СЕРГЕЙ</span> МЯКОТНЫХ</p>
                 </div>
-                <button className='task__button'>Завершить</button>
+                <p className='task__status'>Активно</p>
                 </li>
                 {showChat && (
                 <>
@@ -111,6 +143,7 @@ const Interaction = () => {
                         <Link to="support" className='interaction__link black'>ОБРАТИТЬСЯ В ПОДДЕРЖКУ</Link>
                     </div>
                     <div className='interaction__buttons'>
+                        <Link onClcik={() => window.scrollTo(0,0)} to="/applications" className='interaction__buttons--btn'>ЗАЯВКИ</Link>
                         <Link onClick={() => window.scrollTo(0, 0)} to="/createtask" className='interaction__buttons--btn'>СОЗДАТЬ<span className='orange'>ЗАНЯТИЕ</span></Link>
                         <Link onClick={() => window.scrollTo(0, 0)} to="/createresume" className='interaction__buttons--btn'>СОЗДАТЬ<span className='orange'>РЕЗЮМЕ</span></Link>
                     </div>

@@ -19,6 +19,7 @@ import Edit from './pages/edit';
 import History from './pages/history';
 import CreateTask from './pages/createtask';
 import CreateResume from './pages/createresume';
+import Applications from './pages/applications';
 
 import Footer from './components/Footer';
 
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/history" element={<History />} />
                 <Route path="/createtask" element={<CreateTask />} />
                 <Route path="/createresume" element={<CreateResume />} />
+                <Route path="/applications" element={<Applications />} />
             </Routes>
             <Footer />
         </Router>

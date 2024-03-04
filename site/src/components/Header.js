@@ -5,6 +5,8 @@ import '../css/header.css';
 import '../css/normalize.css';
 import '../css/reset.css';
 
+import zayavki from '../images/zayavki.svg';
+
 import {Link} from 'react-router-dom';
 
 import Menu from "./Menu.js";
@@ -39,8 +41,8 @@ const Header = () => {
             <Link onClick={() => window.scrollTo(0, 0)} to="/findstudent" className='link find-student'>НАЙТИ <span className='orange'>УЧЕНИКА</span><div className="link__underline"></div></Link>
             
           </li>
-          <li className='header__menu--item user'>
-            <div className="alert-outside ">1</div>
+          <li className='header__menu--item user hidden'>
+            <div className="alert-outside hidden">1</div>
             <button className='user__button' onClick={handleClick}>
                   Сергей Мякотных
                   <img src={require('../icons/arrow.png')} className='user__button--arrow'/>
@@ -48,13 +50,13 @@ const Header = () => {
               {isDropdownOpen && (
                   <ul className="user__dropdown">
                       <Link to='/profile' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/profile.png')}/> Профиль</Link>
-                      <Link to='/history' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/history.png')}/> Заявки <div className='alert'>1</div></Link>
+                      <Link to='/applications' onClick={() => Click()} className='user__item'><img className='user__icon' src={zayavki}/> Заявки <div className='alert'>1</div></Link>
                       <Link to='/history' onClick={() => Click()} className='user__item'><img className='user__icon' src={require('../icons/history.png')}/> История платежей</Link>
                       <li className='user__item'><img className='user__icon' src={require('../icons/exit.png')}/> Выход</li>
                   </ul>
               )}
           </li>
-          <li className='header__menu--item buttons hidden'>
+          <li className='header__menu--item buttons'>
             <Link onClick={() => window.scrollTo(0, 0)} to="/registration" className='link button--registration'>
               РЕГИСТРАЦИЯ
             </Link>
