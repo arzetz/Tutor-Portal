@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.startnow {
+    padding-bottom: 70px;
+}
+
+.startnow__container {
+    margin: 0 auto;
+    margin-top: 74px;
+    font-family: 'Montserrat', sans-serif;
+    width: 1200px;
+    height: 300px;
+    background: white;
+}
+
+.startnow__title {
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    color: #333333;
+}
+
+.startnow__text {
+    max-width: 630px;
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.startnow__buttons {
+    margin-top: 25px;
+    width: 470px;
+    height: 44px;
+    display: flex;
+    gap: 20px;
+}
+
+.startnow__buttons--findtutor {
+    width: 245px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8800;
+    color: white;
+    font-size: 20;
+    font-weight: 500;
+    gap: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.startnow__buttons--findtutor:hover {
+    background-color: white;
+    outline: 1px solid #ff8800;
+    color: #ff8800;
+}
+
+.startnow__buttons--findstudent {
+    width: 200px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #ff8800;
+    outline: 1px solid #ff8800;
+    font-size: 20;
+    font-weight: 500;
+    gap: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.startnow__buttons--findstudent:hover {
+    background-color: #ff8800;
+    color: white;
+}
+
+
+@media (min-width: 100px) and (max-width: 500px) {
+    .startnow {
+        padding-bottom: 70px;
+    }
+    
+    .startnow__container {
+        width: 350px;
+        height: auto;
+    }
+
+    .startnow__title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .startnow__text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .startnow__buttons--findstudent,
+    .startnow__buttons--findtutor {
+        width: 290px;
+    }
+
+    .startnow__buttons {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+}

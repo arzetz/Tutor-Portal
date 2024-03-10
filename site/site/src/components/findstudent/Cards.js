@@ -1,0 +1,1 @@
+import src1 from '../../images/user.jpg';

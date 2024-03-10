@@ -1,0 +1,66 @@
+import src1 from '../../../images/user.jpg';
+const tasksforstudent = [
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    {
+        category: "Русский язык",
+        title: "Репетитор по русскому языку",
+        price: "1 000 ₽ / час",
+        date: "13.04.2024",
+        name: "СЕРГЕЙ",
+        surname: "МЯКОТНЫХ",
+        status: "Активно",
+        photo: src1,
+    },
+    
+];
+
+export {tasksforstudent};

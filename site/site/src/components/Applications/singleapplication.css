@@ -1,0 +1,124 @@
+.singleapplication {
+    margin: 0 auto;
+    width: 1200px;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+.singleapplication__content {
+    width: 1200px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 45px;
+}
+
+.singleapplication__title {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-underline-position: under;
+    cursor: pointer;
+    color: #ff8800;
+}
+
+.singleapplication__title:hover {
+    text-decoration: underline;
+}
+
+.singleapplication__info {
+    position: relative;
+    width: 850px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 2px rgba(0,0,0,0.2);
+    padding: 30px 30px;
+}
+
+.singleapplication__category {
+    font-size: 20px;
+    font-weight: 500;
+    color: #a2a2a2;
+    padding-bottom: 5px;
+}
+
+.singleapplication__title--title {
+    font-size: 24px;
+    color: black;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.singleapplication__description--title {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.singleapplication__description {
+    font-size: 15px;
+    line-height: 1.2;
+    height: auto;
+}
+
+.singleapplication__price--title {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.singleapplication__price {
+    font-size: 20px;
+    color: #ff8800;
+    padding-bottom: 20px;
+}
+
+.singleapplication__button {
+    position: absolute;
+    width: 175px;
+    height: 50px;
+    background-color: #ff8800;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.singleapplication__button:hover {
+    background-color: white;
+    color: #ff8800;
+    border: 1px solid #ff8800;
+}
+
+.singleapplication__input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #a2a2a2;
+    border-radius: 10px;
+    padding: 0 15px;
+    outline: none;
+}
+
+.otklik-form {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+}
+
+
+.singleapplication__input::placeholder {
+    font-size: 13.4px;
+}

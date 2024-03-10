@@ -1,0 +1,430 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+.header + section {
+  padding-top: 96px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 96px;
+  background: white;
+  z-index: 999;
+}
+
+
+
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.user__button {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background-color: #ff8800;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.user__button--arrow {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.user__dropdown {
+  position: absolute;
+  top: 80px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 7px 3px rgba(0,0,0,0.2);
+  height: auto;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user__item {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 5px;
+  color: #333333;
+  align-items: center;
+}
+
+.alert {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #ff8800;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-outside {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  left: -10px;
+  top: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.user__item:hover {
+  color: #ff8800;
+}
+
+.user__icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 1300px) {
+.header__container {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  width: 1200px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+
+
+.header__menu {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1280px;
+  height: 96px;
+  gap: 60px;
+  
+}
+
+.header__menu--item {
+  width: 250px;
+  height: 96px;
+}
+
+.logo {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 0 0;
+  gap: 20px;
+}
+
+.logo__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.logo__title {
+  max-width: 100px;
+  font-size: 20px;
+  color: #FF8800;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 500px;
+}
+
+.link {
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 370px;
+}
+
+.button--registration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 43px;
+  background: #FF8800;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.button--login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 43px;
+  outline: 1px solid #FF8800;
+  background: white;
+  border-radius: 10px;
+  color: #FF8800;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.find-tutor {
+  font-weight: bold;
+  color: #1E1E1E;
+  transition: transform 0.2s;
+}
+
+.find-student {
+  font-weight: bold;
+  color: #1E1E1E;
+  transition: transform 0.2s;
+}
+
+.orange {
+  color: #FF8800;
+}
+
+.link__underline {
+  width: 100%;
+  height: 3px;
+  background-color: #FF8800;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+}
+
+.find-tutor:hover .link__underline {
+  opacity: 1;
+  transform: translateY(8px);
+}
+
+.find-student:hover
+.link__underline {
+  opacity: 1;
+  transform: translateY(8px);
+}
+
+.button--login:hover {
+  background: #FF8800;
+  color: white;
+}
+
+.button--registration:hover {
+
+  background: white;
+  color: #FF8800;
+  outline: 1px solid #FF8800;
+}
+}
+
+@media (min-width: 100px) and (max-width: 500px) {
+
+  .header {
+    height: 48px;
+  }
+
+  .header__container {
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .header__menu {
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    gap: 80px;
+    background-color: white;
+  }
+  
+  .header__menu--item {
+    width: 250px;
+    height: 50px;
+  }
+  
+  .logo {
+
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0 0;
+    gap: 5px;
+    z-index: 10;
+    left: 10px;
+  }
+  
+  .logo__icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .logo__title {
+    max-width: 200px;
+    font-size: 16px;
+    color: #FF8800;
+    font-weight: bold;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    width: 490px;
+    display: none;
+  }
+  
+  .link {
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 370px;
+    display: none;
+  }
+  
+  .button--registration {
+    display: none;
+  }
+  
+  .button--login {
+    display: none;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .find-tutor {
+    display: none;
+  }
+  
+  .find-student {
+    display: none;
+  }
+  
+  .orange {
+    color: #FF8800;
+  }
+  
+  .link__underline {
+    width: 100%;
+    height: 3px;
+    background-color: #FF8800;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s;
+  }
+  
+  .find-tutor:hover .link__underline {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+  
+  .find-student:hover
+  .link__underline {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+  
+  .button--login:hover {
+    background: #FF8800;
+    color: white;
+  }
+  
+  .button--registration:hover {
+  
+    background: white;
+    color: #FF8800;
+    outline: 1px solid #FF8800;
+  }
+
+  .burger-menu {
+    -webkit-tap-highlight-color: transparent;
+    position: fixed;
+    width: 40px;
+    height: 30px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .line {
+    width: 40px;
+    height: 3px;
+    background-color: #FF8800;
+    margin: 6px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+
+}
