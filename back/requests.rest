@@ -1,0 +1,64 @@
+GET http://localhost:1234/applications/
+###
+
+POST http://localhost:1234/findstudent
+Content-Type: application/json
+
+{
+    "category": "Иностaarrrfffранные языки",
+    "title": "biba55555",
+    "price": "13",
+    "description": "cock55555"
+}
+
+###
+
+POST http://localhost:1234/applications
+Content-Type: application/json
+
+{
+    "photo": "../../images/user.jpg",
+    "category": "Инострghаннвпывпываые языsdки",
+    "title": "biba55555",
+    "price": 13,
+    "description": "cock55555"
+}
+
+###
+
+GET  http://localhost:1234/profile
+Content-Type: application/json
+
+{
+    "type": "shit5555",
+    "category": "Иностранные языки",
+    "title": "biba55555",
+    "price": 13,
+    "photo": "ddd55555",
+    "name": "boba55555",
+    "surname": "sisa55555",
+    "description": "cock55555"
+}
+
+###
+
+POST http://localhost:1234/profile/new
+Content-Type: application/json
+
+{
+    "type": "shit5555",
+    "category": "Иностранные языки",
+    "title": "biba55555",
+    "price": 13,
+    "photo": "ddd55555",
+    "name": "boba55555",
+    "surname": "sisa55555",
+    "description": "cock55555"
+}
+
+###
+
+DELETE http://localhost:1234/delete/65ebf18e862b51a08fc3ab75
+
+###
+GET  http://localhost:1234/findtutor
